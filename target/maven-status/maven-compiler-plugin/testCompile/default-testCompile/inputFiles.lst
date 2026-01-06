@@ -1,0 +1,11 @@
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/CrashControllerTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/service/AbstractClinicServiceTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/OwnerControllerTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/PetControllerTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/VetControllerTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceSpringDataJpaTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/PetTypeFormatterTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceJdbcTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/web/VisitControllerTests.java
+/home/vagrant/app/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceJpaTests.java

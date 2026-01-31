@@ -76,14 +76,13 @@
   # SHELL
 
 Vagrant.configure("2") do |config|
-config.vm.synced_folder "C:/Users/shr1l/Spring_Java_project/JavaApp-CICD", "/home/vagrant/JavaApp-CICD"
-config.vm.network "forwarded_port", guest: 9091, host: 9091
 
   # Web VM
   config.vm.define "web" do |web|
     web.vm.box = "ubuntu/focal64"
     web.vm.hostname = "web.local"
     web.vm.network "private_network", ip: "192.168.56.22"
+    web.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh-web"
     web.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
       vb.cpus = 1
@@ -92,7 +91,6 @@ config.vm.network "forwarded_port", guest: 9091, host: 9091
       sudo apt-get update -y
       sudo apt-get install -y nginx
       sudo bash -c 'cat > /etc/nginx/sites-available/spring <<\EOF
-
 server {
     listen 80;
     server_name localhost;
@@ -115,6 +113,8 @@ EOF'
     app.vm.box = "ubuntu/focal64"
     app.vm.hostname = "app.local"
     app.vm.network "private_network", ip: "192.168.56.20"
+    app.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh-app"
+    app.vm.network "forwarded_port", guest: 8080, host: 9091, id: "app-http"
     app.vm.synced_folder "C:/Users/shr1l/Spring_Java_project/JavaApp-CICD", "/home/vagrant/JavaApp-CICD"
     app.vm.boot_timeout = 600
     app.vm.provider "virtualbox" do |vb|
@@ -136,6 +136,7 @@ EOF'
     db.vm.box = "ubuntu/focal64"
     db.vm.hostname = "db.local"
     db.vm.network "private_network", ip: "192.168.56.21"
+    db.vm.network "forwarded_port", guest: 22, host: 2224, id: "ssh-db"
     db.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
       vb.cpus = 1

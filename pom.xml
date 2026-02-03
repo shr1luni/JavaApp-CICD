@@ -408,7 +408,7 @@
             <plugin>
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
-                <version>$1.10.1</version>
+                <version>$1.9.0</version>
                 <executions>
                     <execution>
                         <phase>generate-resources</phase>
@@ -554,4 +554,5 @@
     </repositories>
 
 </project>
+
 

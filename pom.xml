@@ -431,7 +431,7 @@
                         <artifactId>bootstrap</artifactId>
                         <version>${webjars-bootstrap.version}</version>
                     </dependency>
-                     Required for Java 9 and above 
+                     <!-- Required for Java 9 and above  -->
                      <dependency>
                         <groupId>org.mockito</groupId>
                         <artifactId>mockito-core</artifactId>
@@ -556,6 +556,7 @@
     </repositories>
 
 </project>
+
 
 
 

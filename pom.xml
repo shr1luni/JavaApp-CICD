@@ -405,7 +405,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!-- <plugin>
                <groupId>ro.isdc.wro4j</groupId>
                <artifactId>wro4j-maven-plugin</artifactId>
                <version>1.10.0</version>
@@ -423,18 +423,18 @@
                 <goal>run</goal>
             </goals>
         </execution>
-    </executions>
+    </executions> -->
     
     <!-- ADD THESE DEPENDENCIES WITH EXCLUSIONS -->
-    <dependencies>
+    <!-- <dependencies>
         <dependency>
             <groupId>ro.isdc.wro4j</groupId>
             <artifactId>wro4j-extensions</artifactId>
             <version>1.10.0</version>
 
-            <exclusions>
+            <exclusions> -->
                 <!-- Exclude conflicting dependencies -->
-                <exclusion>
+                <!-- <exclusion>
                     <groupId>org.webjars.npm</groupId>
                     <artifactId>minimatch</artifactId>
                 </exclusion>
@@ -453,7 +453,7 @@
             </exclusions>
         </dependency>
     </dependencies>
-</plugin>
+</plugin> -->
 
 
             <plugin>
@@ -571,6 +571,7 @@
     </repositories>
 
 </project>
+
 
 
 

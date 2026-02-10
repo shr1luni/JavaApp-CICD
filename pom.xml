@@ -454,25 +454,25 @@
         </dependency>
     </dependencies>
 </plugin> -->
-                 <project>
-                 <build>
-  <pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>ro.isdc.wro4j</groupId>
-        <artifactId>wro4j-maven-plugin</artifactId>
-        <version>1.10.0</version>
-        <executions>
-          <execution>
-            <id>disable-wro4j</id>
-            <phase>none</phase>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </pluginManagement>
-</build>
-                 </project>
+         <project>
+             <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>ro.isdc.wro4j</groupId>
+                            <artifactId>wro4j-maven-plugin</artifactId>
+                            <version>1.10.0</version>
+                         <executions>
+                             <execution>
+                                 <id>disable-wro4j</id>
+                                 <phase>none</phase>
+                             </execution>
+                         </executions>
+                       </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+         </project>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -588,6 +588,7 @@
     </repositories>
 
 </project>
+
 
 
 

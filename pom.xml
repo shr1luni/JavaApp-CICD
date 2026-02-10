@@ -310,6 +310,23 @@
                 <directory>${project.basedir}/src/test/resources</directory>
             </testResource>
         </testResources>
+
+             <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>ro.isdc.wro4j</groupId>
+                            <artifactId>wro4j-maven-plugin</artifactId>
+                            <version>1.10.0</version>
+                         <executions>
+                             <execution>
+                                 <id>disable-wro4j</id>
+                                 <phase>none</phase>
+                             </execution>
+                         </executions>
+                       </plugin>
+                    </plugins>
+                </pluginManagement>
+             
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -454,22 +471,7 @@
         </dependency>
     </dependencies>
 </plugin> -->
-         
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>ro.isdc.wro4j</groupId>
-                            <artifactId>wro4j-maven-plugin</artifactId>
-                            <version>1.10.0</version>
-                         <executions>
-                             <execution>
-                                 <id>disable-wro4j</id>
-                                 <phase>none</phase>
-                             </execution>
-                         </executions>
-                       </plugin>
-                    </plugins>
-                </pluginManagement>
+             
 
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
@@ -586,6 +588,7 @@
     </repositories>
 
 </project>
+
 
 
 

@@ -432,14 +432,6 @@
             <artifactId>wro4j-extensions</artifactId>
             <version>1.10.0</version>
 
-                 <configuration>
-        <skip>true</skip>  <!-- ADD THIS LINE -->
-        <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
-        <cssDestinationFolder>${project.build.directory}/petclinic/resources/css</cssDestinationFolder>
-        <wroFile>${basedir}/src/main/wro/wro.xml</wroFile>
-        <extraConfigFile>${basedir}/src/main/wro/wro.properties</extraConfigFile>
-        <contextFolder>${basedir}/src/main/webapp/resources/less</contextFolder>
-    </configuration>
             <exclusions>
                 <!-- Exclude conflicting dependencies -->
                 <exclusion>
@@ -579,6 +571,7 @@
     </repositories>
 
 </project>
+
 
 
 

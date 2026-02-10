@@ -454,7 +454,7 @@
         </dependency>
     </dependencies>
 </plugin> -->
-         <project>
+         
              <build>
                 <pluginManagement>
                     <plugins>
@@ -472,7 +472,7 @@
                     </plugins>
                 </pluginManagement>
             </build>
-         </project>
+
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -588,6 +588,7 @@
     </repositories>
 
 </project>
+
 
 
 

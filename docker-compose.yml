@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  app:
+    image: luniva6/spring-app:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: petclinic
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:

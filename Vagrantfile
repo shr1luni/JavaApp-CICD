@@ -115,6 +115,14 @@ EOF'
     app.vm.box = "ubuntu/focal64"
     app.vm.hostname = "app.local"
     app.vm.network "private_network", ip: "192.168.56.20"
+
+  # Forwarded ports
+    app.vm.network "forwarded_port", guest: 22, host: 2222   # SSH
+    app.vm.network "forwarded_port", guest: 9090, host: 9090 # Prometheus
+    app.vm.network "forwarded_port", guest: 3000, host: 3000 # Grafana
+    app.vm.network "forwarded_port", guest: 9100, host: 9100 # Node Exporter
+    app.vm.network "forwarded_port", guest: 9093, host: 9093 # Alertmanager
+
     app.vm.synced_folder "C:/Users/shr1l/Spring_Java_project/JavaApp-CICD", "/home/vagrant/JavaApp-CICD"
     app.vm.boot_timeout = 600
     app.vm.provider "virtualbox" do |vb|
